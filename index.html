@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Menu</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar{
+            margin-top: 0.3rem;
+            width: 90%;
+            padding: 1rem;
+            background-color: green;
+        }
+        .nav-items{
+            margin-left: 2rem;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 2rem;
+        }
+        .dropdown{
+            position: relative;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            background:green;
+            padding: 0.3rem;
+            top: 0;
+            left: -9%;
+            transform: translateY(17%);
+            z-index: 1;
+        }
+        .dropbtn:hover{
+            color:orange;
+        }
+        
+        .dropdown-content div{
+            margin-bottom: 1.4rem;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+          
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-items"><a href="#">Home</a></div>
+        <div class="nav-items"><a href="#">About</a></div>
+        <div class="dropdown nav-items">
+          <a href="#" class="dropbtn">Products</a>
+          <div class="dropdown-content">
+            <div><a href="#">Engineering</a></div>
+            <div><a href="#">Telecom</a></div>
+            <div><a href="#">Energy</a></div>
+            <div><a href="#">Finance</a></div>
+            <div><a href="#">Consultancy</a></div>
+          </div>
+        </div>
+        <div class="nav-items"><a href="#">Services</a></div>
+        <div class="nav-items"><a href="#">Contact</a></div>
+      </div>
+    </nav>
+  </body>
+</html>
